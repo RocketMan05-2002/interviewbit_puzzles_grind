@@ -1,0 +1,51 @@
+problem link - https://www.interviewbit.com/problems/cross-the-bridge/
+
+🔑 Core Idea
+
+The bottleneck is slow walkers (5 and 10).
+	•	They must cross at some point, and when they do, the crossing will take as long as the slowest person in the pair.
+	•	So the challenge is: How do we move the slow ones without wasting extra time on returns?
+
+⸻
+
+⚙️ Common Strategies in These Puzzles
+	1.	Fastest as shuttle 🚴
+	•	Usually, the fastest person (or the two fastest) go back and forth to “ferry” the others.
+	•	Reason: their return trips cost less time.
+	•	Example here: 1 and 2 act as shuttlers.
+	2.	Pair slowest together 🐢🐢
+	•	You don’t want the slowest guy walking multiple times.
+	•	Best case: put 5 & 10 together → one slow trip of 10 minutes instead of two slow trips.
+	3.	Never send slow + fast unnecessarily ⚖️
+	•	If 10 goes with 1, then 1 must come back. That wastes the benefit of having a fast person.
+	•	Better to send slowest ones in one go, escorted only by the fastest returner.
+
+⸻
+
+✨ Why this worked out
+
+We wanted to minimize the number of trips involving 10 (the slowest).
+	•	If 10 goes alone with 1, that’s 10 min out and 1 min back = 11 just for one person.
+	•	If 5 goes alone with 1, that’s 5 + 1 = 6 extra.
+	•	That’s too costly.
+
+So instead:
+	•	Send 5 & 10 together once (cost 10).
+	•	Make 1 & 2 handle all the back-and-forth (cheap, only 1 or 2 minutes per return).
+
+That balance gives us the optimal 17.
+
+⸻
+
+🧠 Template to remember
+
+Whenever you see these:
+	1.	Identify the two fastest. → They’re your shuttlers.
+	2.	Identify the two slowest. → They should cross together once.
+	3.	Build the sequence so the slowest pair crosses only once, and the fastest do most of the ferrying.
+	4.	Always check total — sometimes sending “fast + fast first” vs. “fast + slow first” makes a difference.
+
+⸻
+
+⚡ Quick memory hack:
+👉 “Fastest ferry, slowest pair.”
