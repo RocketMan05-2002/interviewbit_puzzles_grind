@@ -1,0 +1,26 @@
+This is a Pigeonhole Principle type problem. Let’s carefully think step by step:
+
+⸻
+
+We have:
+	•	10 black socks
+	•	10 white socks
+	•	You can’t see while picking
+	•	You need a matching pair (either 2 black or 2 white) to go out.
+
+⸻
+
+Worst case thinking:
+	•	First pick: Suppose it’s black.
+	•	Second pick: Suppose it’s white.
+
+Now you have one black and one white. Still no usable pair.
+	•	Third pick: Whatever you pick (black or white), you will now have at least two socks of the same color.
+
+So in the worst case, you need to pick 3 socks to guarantee a matching pair. ✅
+
+⸻
+
+Final Answer:
+
+3

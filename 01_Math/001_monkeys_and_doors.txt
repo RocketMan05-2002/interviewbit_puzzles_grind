@@ -1,0 +1,29 @@
+problem link - https://www.interviewbit.com/problems/monkeys-and-doors/
+
+draw a triangle, you would find only perfect square numbered doors have odd occurances. rest have even.
+thus 1,4,9,16,...100, these doors would remian open at the end. 
+
+But here's a c++ code for better visualisation.
+
+// the main idea is only perfect squares 1,4,9,....100 i.e 10 numbers would have odd factors rest of them would have even factors. thus the answer is 10.
+// But heres the entire problem implementation coz we jobless!
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n = 100;
+    vector<int> temp(n+1, 0);   // doors 0..100 (we’ll use 1..100)
+
+    for(int i=1; i<=100; i++){
+        for(int j=i; j<=100; j+=i){ // j->jumps
+            temp[j] = 1 - temp[j]; // flipping of doors
+        }
+    }
+
+    int count = 0;
+    for(int i=1; i<=100; i++){   // start from 1-100 to know the states finally
+        if(temp[i] == 1) count++;
+    }
+    cout << count << endl; // returns answer as 10.
+    return 0;
+}
