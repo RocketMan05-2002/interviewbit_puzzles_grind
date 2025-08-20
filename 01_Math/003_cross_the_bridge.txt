@@ -1,5 +1,21 @@
 problem link - https://www.interviewbit.com/problems/cross-the-bridge/
 
+	1.	1 & 2 cross → 2 minutes (both are on the far side).
+⏱ Total = 2
+(Side A: 5, 10 | Side B: 1, 2)
+	2.	1 returns → 1 minute.
+⏱ Total = 3
+(Side A: 1, 5, 10 | Side B: 2)
+	3.	5 & 10 cross → 10 minutes.
+⏱ Total = 13
+(Side A: 1 | Side B: 2, 5, 10)
+	4.	2 returns → 2 minutes.
+⏱ Total = 15
+(Side A: 1, 2 | Side B: 5, 10)
+	5.	1 & 2 cross again → 2 minutes.
+⏱ Total = 17
+(Side A: — | Side B: 1, 2, 5, 10 ✅)
+
 🔑 Core Idea
 
 The bottleneck is slow walkers (5 and 10).
