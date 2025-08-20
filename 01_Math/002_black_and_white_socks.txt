@@ -1,3 +1,5 @@
+problem link - https://www.interviewbit.com/problems/ten-black-and-white-socks/
+
 This is a Pigeonhole Principle type problem. Let’s carefully think step by step:
 
 ⸻
